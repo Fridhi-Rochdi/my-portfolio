@@ -1,0 +1,65 @@
+.Navbar {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background-color: rgba(8, 14, 10, 0.212);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 20px;
+    border-radius: 15px; /* Arrondi pour un meilleur design */
+}
+
+.icone-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+   
+}
+
+.icone-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    gap: 10px;
+}
+.bi-linkedin{
+    color: rgb(29, 29, 214);
+    cursor: pointer;
+}
+.bi-github{
+    color: rgb(57, 57, 57);
+    cursor: pointer;
+}
+.bi-facebook{
+    color: rgb(28, 28, 107);
+    cursor: pointer;
+}
+
+.icone-item i {
+    font-size: 25px;
+}
+
+.icone-item:hover {
+    background-color: #1a1a3a; /* Effet au survol */
+}
+
+/* Mode mobile */
+@media screen and (max-width: 900px) {
+    .Navbar {
+        flex-direction: column;
+        align-items: flex-end; /* Aligner les éléments à droite */
+        width: auto; /* Adapter la largeur */
+        padding-right: 10px; /* Éviter que les icônes collent trop au bord */
+    }
+    .social-media{
+        display: none;
+    }
+}

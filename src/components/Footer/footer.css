@@ -1,0 +1,28 @@
+footer {
+  
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer span {
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 900px) {
+    footer {
+      font-size: 12px; /* Reduce text size on small screens */
+      padding: 10px 0;
+      justify-content: center;
+    }
+  }
+  

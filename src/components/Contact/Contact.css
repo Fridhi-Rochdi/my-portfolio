@@ -1,0 +1,227 @@
+.contact {
+    height: 100%;
+    display: flex;
+    gap: 80px;
+    flex-direction: column;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: transparent;
+    animation: none;
+}
+
+@keyframes rotateGradient {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.contact-div-title p {
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1.5px;
+    align-items: center;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 30px rgba(96, 165, 250, 0.3);
+}
+
+.section-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-left-section,
+.contact-right-section {
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-left-section {
+    background: transparent;
+    backdrop-filter: none;
+    border-radius: 20px;
+    border: none;
+    box-shadow: none;
+    transition: all 0.4s ease;
+}
+
+.contact-left-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(96, 165, 250, 0.1);
+}
+
+.contact-right-section {
+    filter: drop-shadow(0 0 30px rgba(96, 165, 250, 0.3));
+}
+
+form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.formitem {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formitem label {
+    color: #60a5fa;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+input,
+textarea {
+    padding: 15px 20px;
+    border: 2px solid rgba(96, 165, 250, 0.3);
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.5);
+    color: #e2e8f0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #60a5fa;
+    background: rgba(15, 23, 42, 0.7);
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+    transform: translateY(-2px);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(226, 232, 240, 0.5);
+}
+
+button {
+    padding: 18px;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(96, 165, 250, 0.4);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(96, 165, 250, 0.6);
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+.success-message {
+    color: #34d399;
+    font-weight: 600;
+    padding: 12px;
+    background: rgba(52, 211, 153, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    text-align: center;
+}
+
+.error-message {
+    color: #f87171;
+    font-weight: 600;
+    padding: 12px;
+    background: rgba(248, 113, 113, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(248, 113, 113, 0.3);
+    text-align: center;
+}
+
+/* Mode mobile (écrans < 900px) */
+@media screen and (max-width: 900px) {
+    .contact {
+        gap: 50px;
+        padding: 30px 15px;
+        margin: 10px;
+    }
+
+    .section-contact {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-left-section,
+    .contact-right-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contact-left-section {
+        padding: 25px 20px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .contact-div-title p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:600px){
+    .contact {
+        gap: 30px;
+        padding: 20px 10px;
+    }
+
+    .contact-div-title p {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .formitem label {
+        font-size: 0.9rem;
+    }
+
+    input,
+    textarea {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
