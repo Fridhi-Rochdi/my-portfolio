@@ -32,7 +32,7 @@ const Hero = () => {
                         I am a driven Computer Science Engineering student with a strong foundation in Competitive Programming, Software Development, Data Analysis, and Machine Learning.
                     </p>
                     <div className="download">
-                        <a href="Fridhi-Rochdi-2.pdf" download>
+                        <a href="RochdiFridhi_CV.pdf" download="RochdiFridhi_CV.pdf">
                             <i className="bi bi-download"></i><span className='download-des'>Download CV</span>
                         </a>
                     </div>
